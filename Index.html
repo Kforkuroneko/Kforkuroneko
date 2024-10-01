@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset+"UTF-8">
-    <meta name="viewpoint" contect="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <div class="wrapper">
-      <h2 class="question">Will you be mine?</h2>
-      <img class="gif" alt="gif" src="https://images.app.goo.gl/hwsoc7FAg19usqp66"/>
-    <div class="btn-group"> 
-      <button class="yes-btn>YES</button>
-      <button class="no-btn>NO</button>
-    </div>
-    <script src="script.js"></script>                              
-  </body>
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+    </head> 
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="header_text">Will you be my Girlfriend?</h1>
+                <!-- Adding the h3 tag with a message -->
+<!--                 <h3 class="subheader_text">Let's make it official!</h3>  -->
+            </div>
+            <div class="gif_container">
+                <img src="<iframe src="https://giphy.com/embed/etALjiqGpYu76A6mZG" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/cute-tonton-tontonfriends-etALjiqGpYu76A6mZG">via GIPHY</a></p>">
+            </div>
+            <!-- Adding the h6 tag below the gif (to add gf's name) -->
+<!--             <div class="name_container">
+                <h6 class="name_text">Yamin</h6>
+            </div> -->
+            <div class="buttons">
+                <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+    </body> 
 </html>
